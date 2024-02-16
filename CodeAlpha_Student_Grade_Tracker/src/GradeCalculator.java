@@ -22,8 +22,24 @@ public class GradeCalculator {
         int lowest = grades[0];
 
         for(int grade:grades){
-            
+            sum += grade;
+
+            if (grade>highest){
+                highest=grade;
+            }
+            if (grade<lowest){
+                lowest=grade;
+            }
         }
+
+        double average = (double) sum/numStudents;
+
+        //Display results
+        System.out.println("Average grade: " + average);
+        System.out.println("Highest grade: " + highest);
+        System.out.println("Lowest grade: " + lowest);
+
+        scanner.close();
 
     }
 }
